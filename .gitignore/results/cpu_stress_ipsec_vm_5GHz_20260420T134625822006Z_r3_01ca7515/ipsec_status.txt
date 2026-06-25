@@ -1,0 +1,22 @@
+Status of IKE charon daemon (strongSwan 5.9.5, Linux 5.15.0-174-generic, x86_64):
+  uptime: 2 minutes, since Apr 20 13:46:26 2026
+  malloc: sbrk 3067904, mmap 0, used 1274528, free 1793376
+  worker threads: 11 of 16 idle, 5/0/0/0 working, job queue: 0/0/0/0, scheduled: 4
+  loaded plugins: charon aesni aes rc2 sha2 sha1 md5 mgf1 random nonce x509 revocation constraints pubkey pkcs1 pkcs7 pkcs8 pkcs12 pgp dnskey sshkey pem openssl fips-prf gmp agent xcbc hmac gcm drbg attr kernel-netlink resolve socket-default connmark stroke updown eap-mschapv2 xauth-generic counters
+Listening IP addresses:
+  192.168.0.110
+Connections:
+ikev2-client:  %any...193.166.25.193  IKEv2
+ikev2-client:   local:  uses pre-shared key authentication
+ikev2-client:   remote: [193.166.25.193] uses pre-shared key authentication
+ikev2-client:   child:  dynamic === 0.0.0.0/0 TUNNEL
+Security Associations (1 up, 0 connecting):
+ikev2-client[1]: ESTABLISHED 2 minutes ago, 192.168.0.110[192.168.0.110]...193.166.25.193[193.166.25.193]
+ikev2-client[1]: IKEv2 SPIs: cd2f5104d0824648_i* 2c19fd924b3c06d1_r, pre-shared key reauthentication in 2 hours
+ikev2-client[1]: IKE proposal: AES_CBC_256/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_2048
+ikev2-client{1}:  INSTALLED, TUNNEL, reqid 1, ESP in UDP SPIs: cdb0a6f8_i cfe094d5_o
+ikev2-client{1}:  AES_CBC_256/HMAC_SHA2_256_128, 0 bytes_i, 0 bytes_o (0 pkts, 64s ago), rekeying in 40 minutes
+ikev2-client{1}:   10.30.0.1/32 === 192.168.1.175/32
+ikev2-client{2}:  INSTALLED, TUNNEL, reqid 1, ESP in UDP SPIs: ce3ceaf0_i c85b30e1_o
+ikev2-client{2}:  AES_CBC_256/HMAC_SHA2_256_128, 3515561 bytes_i (67605 pkts, 1s ago), 268247179 bytes_o (189686 pkts, 64s ago), rekeying in 45 minutes
+ikev2-client{2}:   10.30.0.1/32 === 192.168.1.175/32

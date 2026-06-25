@@ -1,0 +1,4 @@
+pi-clie+   64148  0.1  0.7  95628 14160 pts/0    S+   09:57   0:00 python3 /home/pi-client/vpn-thesis/scripts/test_system.py --stage cpu_stress --client-role pi --wifi-band 5GHz --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --ping-interval 0.2 --udp-bandwidth 50M --cpu-workers 2 --start-vpn --stop-vpn --clear-netem --client-conf /home/pi-client/pi-client.ovpn --mtu 1500 --capture --cpu-stress --repeat-id 2
+root       64153  0.0  0.2  13400  4596 pts/0    S+   09:57   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       64154  0.0  0.0  13400   676 pts/1    Ss   09:57   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       64155 15.9  0.4  12628  8008 pts/1    S+   09:57   0:42 openvpn --config /home/pi-client/pi-client.ovpn

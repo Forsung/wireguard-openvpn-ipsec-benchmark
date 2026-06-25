@@ -1,0 +1,12 @@
+interface: wg0
+  public key: 2PF5kf+Rh/BCt93OG4tG76OwG89TtMuLMJvkwFMF8CU=
+  private key: (hidden)
+  listening port: 44539
+  fwmark: 0xca6c
+
+peer: 7NFfRbGUDdrM42cpeNozrFgQXfP6T5eSjFF2flekb0s=
+  endpoint: 193.166.25.193:51820
+  allowed ips: 0.0.0.0/0
+  latest handshake: 14 seconds ago
+  transfer: 20.28 MiB received, 1.00 GiB sent
+  persistent keepalive: every 25 seconds

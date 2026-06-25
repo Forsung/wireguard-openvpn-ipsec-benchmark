@@ -1,0 +1,147 @@
+PowerShell
+ssh pi-client@192.168.0.106
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y git curl wget vim htop jq
+
+sudo timedatectl set-ntp true
+timedatectl status
+
+mkdir -p ~/experiment-info
+uname -a > ~/experiment-info/environment.txt
+lsb_release -a >> ~/experiment-info/environment.txt
+cat /etc/os-release >> ~/experiment-info/environment.txt
+lscpu >> ~/experiment-info/environment.txt
+free -h >> ~/experiment-info/environment.txt
+
+mkdir -p ~/results ~/scripts ~/configs ~/metadata
+
+sudo apt install -y \
+  wireguard wireguard-tools \
+  openvpn easy-rsa \
+  strongswan strongswan-pki \
+  iperf3 tcpdump iproute2 iputils-ping \
+  net-tools tshark python3 python3-pip
+
+sudo apt install -y stress-ng
+
+sudo apt install -y cpufrequtils
+sudo cpufreq-set -g performance
+
+echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+iperf3 --version >> ~/experiment-info/environment.txt
+wg --version >> ~/experiment-info/environment.txt
+openvpn --version >> ~/experiment-info/environment.txt
+ipsec --version >> ~/experiment-info/environment.txt
+
+scp pi-client@192.168.0.106:~/experiment-info/environment.txt C:/Users/forsu/vpn-thesis/
+scp -r pi-client@192.168.0.106:/home/pi-client/* C:/Users/forsu/vpn-thesis/Pi-client/
+
+# WIREGUARD CONFIG
+
+cd ~/configs
+wg genkey | tee client_private.key | wg pubkey > client_public.key
+
+cat pi_private.key
+Output: yBjoPCtASMasd4z2g+i5VEb9Z/jjA249Vu8OoJHzD2I=
+
+cat pi_public.key
+Output: QJmh8+lf+/r4QFVvgDzazhEzcaGur478Ap6IWkc8eEc=
+
+sudo nano /etc/wireguard/wg0.conf
+sudo chmod 600 /etc/wireguard/wg0.conf
+
+sudo systemctl enable wg-quick@wg0
+sudo systemctl start wg-quick@wg0
+# or sudo wg-quick up wg0
+# or sudo wg-quick down wg0
+sudo wg show
+ip -4 addr show wg0
+
+ip addr show wg0
+ip route show
+
+ping -c 5 10.10.0.1
+ping -c 5 10.10.0.2
+
+curl -sS ifconfig.me
+# and compare to server public IP
+# on server:
+curl -sS ifconfig.me
+
+iperf3 -c 10.10.0.1 -t 30
+iperf3 -c 10.10.0.1 -t 60 -J > ~/results/wg_iperf_client.json
+
+t0=$(date +%s%3N)
+sudo wg-quick down wg0
+sudo wg-quick up wg0
+t1=$(date +%s%3N)
+echo "Handshake time: $((t1 - t0)) ms"
+
+sudo ip link set eth0 down
+sleep 5
+sudo ip link set eth0 up
+ping 10.10.0.1
+
+stress-ng --cpu 2 --timeout 30
+iperf3 -c 10.10.0.1 -t 30
+
+# OPENVPN CONFIG
+
+nano ~/pi-client.ovpn
+# cat ~/openvpn-ca/pki/ca.crt
+cat ~/openvpn-ca/pki/issued/pi-client.crt
+cat ~/openvpn-ca/pki/private/pi-client.key then copy and paste
+
+# IPSEC CONFIG
+
+sudo nano /etc/ipsec.conf
+sudo nano /etc/ipsec.secrets
+sudo systemctl restart strongswan-starter
+
+ip a
+ip route
+
+#TEST BASELINE
+
+sudo nano ~/vpn-thesis/scripts/baseline_test.sh
+sudo chmod +x ~/vpn-thesis/scripts/baseline_test.sh
+
+	#WIREGUARD
+pip3 install psutil
+sudo wg-quick up wg0
+sudo systemctl status wg-quick@wg0
+~/vpn-thesis/scripts/baseline_test.sh wireguard 10.10.0.1 60 ~/vpn-thesis/results
+
+	#OPENVPN
+sudo systemctl status openvpn-server@server
+sudo openvpn --config ~/pi-client.ovpn (login to the client on another tab before running command below)
+~/vpn-thesis/scripts/baseline_test.sh openvpn 10.20.0.1 60 ~/vpn-thesis/results
+
+	#IPSEC
+sudo systemctl status strongswan-starter
+sudo ipsec statusall
+
+#TEST FULL
+
+sudo nano ~/vpn-thesis/scripts/test_system.py
+sudo nano ~/vpn-thesis/scripts/run_staged_matrix.sh
+
+cd ~/vpn-thesis/scripts
+./run_staged_matrix.sh pi
+
+#Pi IPsec fix
+sudo apt update
+sudo apt install linux-modules-extra-$(uname -r)
+sudo reboot
+
+ls /lib/modules/$(uname -r)/kernel/net/xfrm/
+sudo modprobe xfrm_user
+sudo modprobe af_key
+sudo modprobe esp4
+
+sudo systemctl restart strongswan-starter
+sudo systemctl status strongswan-starter
+

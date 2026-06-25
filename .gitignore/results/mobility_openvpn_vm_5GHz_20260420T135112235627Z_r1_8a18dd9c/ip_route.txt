@@ -1,0 +1,8 @@
+0.0.0.0/1 via 10.20.0.5 dev tun0 
+default via 192.168.0.1 dev enp0s3 proto dhcp src 192.168.0.110 metric 100 
+10.20.0.1 via 10.20.0.5 dev tun0 
+10.20.0.5 dev tun0 proto kernel scope link src 10.20.0.6 
+128.0.0.0/1 via 10.20.0.5 dev tun0 
+192.168.0.0/24 dev enp0s3 proto kernel scope link src 192.168.0.110 metric 100 
+192.168.0.1 dev enp0s3 proto dhcp scope link src 192.168.0.110 metric 100 
+193.166.25.193 via 192.168.0.1 dev enp0s3 

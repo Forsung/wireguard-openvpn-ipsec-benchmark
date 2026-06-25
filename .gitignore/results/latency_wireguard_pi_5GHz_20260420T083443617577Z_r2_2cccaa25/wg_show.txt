@@ -1,0 +1,12 @@
+interface: wg0
+  public key: QJmh8+lf+/r4QFVvgDzazhEzcaGur478Ap6IWkc8eEc=
+  private key: (hidden)
+  listening port: 33196
+  fwmark: 0xca6c
+
+peer: 7NFfRbGUDdrM42cpeNozrFgQXfP6T5eSjFF2flekb0s=
+  endpoint: 193.166.25.193:51820
+  allowed ips: 0.0.0.0/0
+  latest handshake: 12 seconds ago
+  transfer: 22.72 MiB received, 1.03 GiB sent
+  persistent keepalive: every 25 seconds

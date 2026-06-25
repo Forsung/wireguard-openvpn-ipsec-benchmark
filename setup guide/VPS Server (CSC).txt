@@ -1,0 +1,153 @@
+PowerShell
+ssh -i C:/Users/forsu/.ssh/vps-server.pem ubuntu@193.166.25.193
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y git curl wget vim htop jq
+sudo apt install -y ufw curl git
+
+sudo timedatectl set-ntp true
+
+sudo ufw allow ssh
+sudo ufw allow 51820/udp    # WireGuard
+sudo ufw allow 1194/udp     # OpenVPN
+sudo ufw allow 500,4500/udp # IPsec
+sudo ufw enable
+sudo ufw status verbose
+
+mkdir -p ~/experiment-info
+uname -a > ~/experiment-info/environment.txt
+lsb_release -a >> ~/experiment-info/environment.txt
+cat /etc/os-release >> ~/experiment-info/environment.txt
+lscpu >> ~/experiment-info/environment.txt
+free -h >> ~/experiment-info/environment.txt
+
+mkdir -p ~/results ~/scripts ~/configs ~/metadata
+
+sudo apt install -y \
+  wireguard wireguard-tools \
+  openvpn easy-rsa \
+  strongswan strongswan-pki \
+  iperf3 tcpdump iproute2 iputils-ping \
+  net-tools tshark python3 python3-pip
+
+iperf3 --version >> ~/experiment-info/environment.txt
+wg --version >> ~/experiment-info/environment.txt
+openvpn --version >> ~/experiment-info/environment.txt
+ipsec --version >> ~/experiment-info/environment.txt
+
+scp -i C:/Users/forsu/.ssh/vps-server.pem ubuntu@193.166.25.193:~/experiment-info/environment.txt C:/Users/forsu/vpn-thesis/
+scp -i C:/Users/forsu/.ssh/vps-server.pem -r ubuntu@193.166.25.193:/home/ubuntu/* C:/Users/forsu/vpn-thesis/Vps-server/
+
+# WIREGUARD CONFIG
+
+cd ~/configs
+wg genkey | tee server_private.key | wg pubkey > server_public.key
+
+cat server_private.key
+Output: CNg5TMBD2bj+v4Z/566BLWsE8ujsL9i+lrSpsVqtYnA=
+
+cat server_public.key
+Output: 7NFfRbGUDdrM42cpeNozrFgQXfP6T5eSjFF2flekb0s=
+
+sudo nano /etc/wireguard/wg0.conf
+sudo chmod 600 /etc/wireguard/wg0.conf
+
+sudo nano /etc/sysctl.conf
+(uncomment net.ipv4.ip_forward=1)
+
+sudo iptables -t nat -A POSTROUTING -o ens3 -j MASQUERADE
+# Allow forwarding for wg0 subnet:
+sudo iptables -A FORWARD -i wg0 -j ACCEPT
+sudo iptables -A FORWARD -o wg0 -j ACCEPT
+# Save rules
+sudo netfilter-persistent save
+
+sudo systemctl enable wg-quick@wg0
+sudo systemctl start wg-quick@wg0
+sudo systemctl status wg-quick@wg0
+sudo wg show
+ip -4 addr show wg0
+sudo ufw status
+
+iperf3 -s
+
+# OPENVPN CONFIG
+
+make-cadir ~/openvpn-ca
+cd ~/openvpn-ca
+
+./easyrsa init-pki
+./easyrsa build-ca nopass
+
+./easyrsa gen-req server nopass
+./easyrsa sign-req server server
+# type "yes"
+
+./easyrsa gen-req vm-client nopass
+./easyrsa sign-req client vm-client
+
+./easyrsa gen-req pi-client nopass
+./easyrsa sign-req client pi-client
+
+sudo nano /etc/openvpn/server/server.conf
+# content in bracket below:
+(port 1194
+proto udp
+dev tun
+
+ca ca.crt
+cert server.crt
+key server.key
+dh dh.pem
+
+server 10.20.0.0 255.255.255.0
+
+keepalive 10 120
+persist-key
+persist-tun
+
+cipher AES-256-GCM
+user nobody
+group nogroup
+
+# Enable full tunnel
+push "redirect-gateway def1 bypass-dhcp"
+
+# DNS
+push "dhcp-option DNS 1.1.1.1"
+
+verb 3)
+
+sudo cp ~/openvpn-ca/pki/ca.crt /etc/openvpn/server/
+sudo cp ~/openvpn-ca/pki/issued/server.crt /etc/openvpn/server/
+sudo cp ~/openvpn-ca/pki/private/server.key /etc/openvpn/server/
+sudo cp ~/openvpn-ca/pki/dh.pem /etc/openvpn/server//
+
+sudo sysctl -w net.ipv4.ip_forward=1
+
+ip route get 8.8.8.8
+
+sudo iptables -t nat -A POSTROUTING -o ens3 -j MASQUERADE
+
+sudo systemctl start openvpn-server@server
+sudo systemctl enable openvpn-server@server
+sudo systemctl status openvpn-server@server
+
+# IPSEC CONFIG
+
+sudo nano /etc/ipsec.conf
+sudo nano /etc/ipsec.secrets
+
+sudo systemctl restart strongswan-starter
+sudo systemctl enable strongswan-starter
+sudo systemctl status strongswan-starter
+
+#TEST BASELINE
+
+iperf3 -s
+
+#TEST FULL
+nohup iperf3 -s > ~/iperf_server.log 2>&1 &
+ss -ltnp | grep 5201
+tail -f ~/iperf_server.log
+

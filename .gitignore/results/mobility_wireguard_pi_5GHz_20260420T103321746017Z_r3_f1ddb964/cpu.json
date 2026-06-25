@@ -1,0 +1,657 @@
+[
+  {
+    "ts": 1776681203.3325214,
+    "cpu_percent": 0.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681204.3415368,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681205.342469,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681206.3433456,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681207.3442426,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681208.345119,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681209.345977,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681210.346824,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681211.3476684,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681212.3486478,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681213.349494,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681214.3503106,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681215.3516934,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681216.3526654,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681217.3536677,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681218.354836,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681219.3556974,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681220.3567452,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681221.3593712,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681222.360624,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681223.3615744,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681224.362847,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681225.3640492,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681226.365163,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681227.3663132,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681228.3676147,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681229.368854,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681230.3701587,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.5
+  },
+  {
+    "ts": 1776681231.3729022,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681232.3764393,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681233.3773673,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681234.3783965,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681235.379301,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681236.3807752,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681237.3817434,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681238.3831425,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681239.38417,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681240.3852658,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681241.386175,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681242.387137,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681243.3883345,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681244.389479,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681245.390518,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681246.391479,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681247.3928297,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681248.393784,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681249.3947423,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681250.3957283,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.4
+  },
+  {
+    "ts": 1776681251.396664,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681252.3975956,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681253.3988,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681254.4003053,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681255.401227,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.3
+  },
+  {
+    "ts": 1776681256.402533,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681257.403561,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681258.404516,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681259.4054096,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681260.4064112,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681261.4072878,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681262.409042,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681263.4104354,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681264.4113436,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681265.4124918,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681266.4135654,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681267.4145124,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681268.4158983,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681269.4169219,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681270.417881,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681271.4187849,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.0
+  },
+  {
+    "ts": 1776681272.4198198,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681273.4219997,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681274.423165,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681275.42404,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681276.4249282,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681277.4258265,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681278.4266744,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681279.4275541,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681280.4287353,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681281.4296298,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681282.4361567,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681283.4372776,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681284.439878,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681285.441219,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681286.4422162,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681287.443094,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681288.4440255,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681289.4452775,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681290.4461012,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681291.4470353,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681292.4479153,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681293.4498544,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681294.4506943,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681295.451513,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681296.4536223,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681297.4546123,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.1
+  },
+  {
+    "ts": 1776681298.4555335,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681299.4575646,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681300.4586463,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681301.4595354,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681302.4606628,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681303.4614902,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681304.462504,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681305.463661,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681306.4648337,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681307.4657757,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681308.4666784,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681309.4675858,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681310.4688041,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681311.469626,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681312.4704778,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681313.471447,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681314.4730618,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681315.4739347,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681316.4748635,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681317.4757948,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681318.4767404,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681319.4775825,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681320.4784448,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681321.4794214,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681322.4807053,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681323.4816804,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681324.4826133,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681325.4842465,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681326.485252,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681327.487898,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681328.4887857,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681329.4896805,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681330.4905164,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681331.4914024,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681332.4923112,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  },
+  {
+    "ts": 1776681333.4931688,
+    "cpu_percent": 100.0,
+    "mem_percent": 23.2
+  }
+]

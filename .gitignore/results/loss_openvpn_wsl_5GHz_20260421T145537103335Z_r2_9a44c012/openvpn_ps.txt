@@ -1,0 +1,4 @@
+clientvm   30942  0.1  0.0  93048 14464 pts/2    S+   17:55   0:00 python3 /home/clientvm/vpn-thesis/scripts/test_system.py --stage loss --client-role vm --wifi-band 5GHz --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --ping-interval 0.2 --udp-bandwidth 50M --cpu-workers 2 --start-vpn --stop-vpn --clear-netem --client-conf /home/clientvm/vm-client.ovpn --loss 1 --mtu 1500 --capture --repeat-id 2
+root       30944  0.0  0.0   8920  5504 pts/2    S+   17:55   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root       30945  0.0  0.0   8920  2300 pts/3    Ss   17:55   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root       30946  4.8  0.0  13508  9088 pts/3    S+   17:55   0:13 openvpn --config /home/clientvm/vm-client.ovpn

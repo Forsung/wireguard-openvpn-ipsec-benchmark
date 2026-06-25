@@ -1,0 +1,23 @@
+Status of IKE charon daemon (strongSwan 5.9.5, Linux 5.15.0-1098-raspi, aarch64):
+  uptime: 2 minutes, since Apr 20 08:32:18 2026
+  malloc: sbrk 3555328, mmap 0, used 1684624, free 1870704
+  worker threads: 11 of 16 idle, 5/0/0/0 working, job queue: 0/0/0/0, scheduled: 4
+  loaded plugins: charon test-vectors ldap pkcs11 aes rc2 sha2 sha1 md5 mgf1 random nonce x509 revocation constraints pubkey pkcs1 pkcs7 pkcs8 pkcs12 pgp dnskey sshkey pem openssl gcrypt af-alg fips-prf gmp curve25519 agent chapoly xcbc cmac hmac ctr ccm gcm ntru drbg curl attr kernel-netlink resolve socket-default connmark forecast farp stroke vici updown eap-identity eap-aka eap-md5 eap-gtc eap-mschapv2 eap-dynamic eap-radius eap-tls eap-ttls eap-peap eap-tnc xauth-generic xauth-eap xauth-pam tnc-tnccs dhcp lookip error-notify certexpire led addrblock unity counters
+Listening IP addresses:
+  192.168.0.106
+  192.168.0.116
+Connections:
+ikev2-client:  %any...193.166.25.193  IKEv2
+ikev2-client:   local:  uses pre-shared key authentication
+ikev2-client:   remote: [193.166.25.193] uses pre-shared key authentication
+ikev2-client:   child:  dynamic === 0.0.0.0/0 TUNNEL
+Security Associations (1 up, 0 connecting):
+ikev2-client[1]: ESTABLISHED 2 minutes ago, 192.168.0.106[192.168.0.106]...193.166.25.193[193.166.25.193]
+ikev2-client[1]: IKEv2 SPIs: 58fcdae1373c4b63_i* 5106959ec41fa54e_r, pre-shared key reauthentication in 2 hours
+ikev2-client[1]: IKE proposal: AES_CBC_256/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_2048
+ikev2-client{1}:  INSTALLED, TUNNEL, reqid 1, ESP in UDP SPIs: c315a51a_i ce42d570_o
+ikev2-client{1}:  AES_CBC_256/HMAC_SHA2_256_128, 0 bytes_i, 0 bytes_o (0 pkts, 60s ago), rekeying in 44 minutes
+ikev2-client{1}:   10.30.0.3/32 === 192.168.1.175/32
+ikev2-client{2}:  INSTALLED, TUNNEL, reqid 1, ESP in UDP SPIs: c2392846_i c04a1b50_o
+ikev2-client{2}:  AES_CBC_256/HMAC_SHA2_256_128, 12449394 bytes_i (239279 pkts, 0s ago), 1074610827 bytes_o (760504 pkts, 60s ago), rekeying in 39 minutes
+ikev2-client{2}:   10.30.0.3/32 === 192.168.1.175/32

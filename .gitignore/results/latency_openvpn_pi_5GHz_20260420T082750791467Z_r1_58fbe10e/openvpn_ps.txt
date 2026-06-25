@@ -1,0 +1,4 @@
+pi-clie+   57638  0.1  0.7  95708 14144 pts/0    S+   08:27   0:00 python3 /home/pi-client/vpn-thesis/scripts/test_system.py --stage latency --client-role pi --wifi-band 5GHz --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --ping-interval 0.2 --udp-bandwidth 50M --cpu-workers 2 --start-vpn --stop-vpn --clear-netem --client-conf /home/pi-client/pi-client.ovpn --delay 50 --mtu 1500 --capture --repeat-id 1
+root       57640  0.0  0.2  13400  4592 pts/0    S+   08:27   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       57641  0.0  0.0  13400  1812 pts/1    Ss   08:27   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       57642 34.3  0.4  12628  8024 pts/1    S+   08:27   1:31 openvpn --config /home/pi-client/pi-client.ovpn

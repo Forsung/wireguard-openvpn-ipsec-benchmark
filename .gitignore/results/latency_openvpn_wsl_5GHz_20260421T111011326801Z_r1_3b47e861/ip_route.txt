@@ -1,0 +1,7 @@
+0.0.0.0/1 via 10.20.0.9 dev tun0 
+default via 172.17.16.1 dev eth0 proto kernel 
+10.20.0.1 via 10.20.0.9 dev tun0 
+10.20.0.9 dev tun0 proto kernel scope link src 10.20.0.10 
+128.0.0.0/1 via 10.20.0.9 dev tun0 
+172.17.16.0/20 dev eth0 proto kernel scope link src 172.17.19.170 
+193.166.25.193 via 172.17.16.1 dev eth0 
